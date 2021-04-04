@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <div style="display: flex;">
+        <h2>{{ guessing_game["Player_Answer_Correct"][0] }} </h2>
+        <h2>{{ guessing_game["Player_Answer_Correct"][1] }}</h2>
+        <h2>{{ guessing_game["Player_Answer_Correct"][2] }}</h2>
+        <h2>{{ guessing_game["Player_Answer_Correct"][3] }}</h2>
+    </div>
+    <form action="/start_game" method="POST"> 
+        <input type="submit" name="submit" value="A" />
+        <input type="submit" name="submit" value="B" />
+        <input type="submit" name="submit" value="C" />
+        <input type="submit" name="submit" value="D" />
+    </form>
+    <h1 style="margin-top: 2rem;"> count: {{ guessing_game["Count_Answer"] }}</h1>
+    <h1 style="margin-top: 2rem;"> Total wrong: {{ guessing_game["Total_Count"] }}</h1>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <div style="display: flex;">
+        <h2>{{ guessing_game["Game_Answer"][0] }} </h2>
+        <h2>{{ guessing_game["Game_Answer"][1] }}</h2>
+        <h2>{{ guessing_game["Game_Answer"][2] }}</h2>
+        <h2>{{ guessing_game["Game_Answer"][3] }}</h2>
+    </div>
+    <form action="/" method="POST"> 
+        <input type="submit" name="submit" value="A" />
+        <input type="submit" name="submit" value="B" />
+        <input type="submit" name="submit" value="C" />
+        <input type="submit" name="submit" value="D" />
+    </form>
+    <form action='/start_game' method="POST">
+        <input style="margin-top: 2rem;" type='submit' name='submit' value="start" />
+
+    </form>
+</body>
+</html>
